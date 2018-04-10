@@ -39,6 +39,8 @@ import java.io.File;
 import java.io.IOException;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -193,6 +195,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view The save button.
      */
+    @OnClick(R.id.save_button)
     public void saveMe(View view) {
         // Delete the temporary image file
         BitmapUtils.deleteImageFile(this, mTempPhotoPath);
@@ -206,6 +209,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view The share button.
      */
+    @OnClick(R.id.share_button)
     public void shareMe(View view) {
         // Delete the temporary image file
         BitmapUtils.deleteImageFile(this, mTempPhotoPath);
@@ -222,6 +226,7 @@ public class MainActivity extends AppCompatActivity {
      *
      * @param view The clear button.
      */
+    @OnClick(R.id.clear_button)
     public void clearImage(View view) {
         // Clear the image and toggle the view visibility
         mImageView.setImageResource(0);
